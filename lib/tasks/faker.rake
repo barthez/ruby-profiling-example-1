@@ -6,7 +6,7 @@ namespace :faker do
     number.times do
       Employer.create(
         name: Faker::Company.name,
-        logo_url: Faker::Company.logo,
+        logo_url: "logos/small/color/#{1 + rand(11)}.png",
         catch_phrase: Faker::Company.catch_phrase
       )
       progress.increment

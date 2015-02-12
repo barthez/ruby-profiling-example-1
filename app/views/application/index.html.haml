@@ -2,7 +2,7 @@
   - @employers.each do |employer|
     %li
       .logo
-        %img{src: employer.logo_url}
+        = image_tag(employer.logo_url)
       .content
         %h3= employer.name
         %p= employer.catch_phrase
