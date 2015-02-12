@@ -7,7 +7,7 @@
         %h3= employer.name
         %p= employer.catch_phrase
       %ul.jobs
-        - employer.jobs.each do |job|
+        - employer.jobs.faster.each do |job|
           %li
             %p= link_to job.title, "/jobs/#{job.slug}"
             %p

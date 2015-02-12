@@ -19,4 +19,6 @@ class Job
 
   belongs_to :employer, counter_cache: true
   has_and_belongs_to_many :ontology_jobs, class_name: 'Ontology::Job'
+
+  scope :faster, -> { only(:title, :slugs, :ontology_job_ids).includes(:ontology_jobs) }
 end
