@@ -1,0 +1,8 @@
+%ul.employers
+  - @employers.each do |employer|
+    %li
+      .logo
+        %img{src: employer.logo_url}
+      .content
+        %h3= employer.name
+        %p= employer.catch_phrase
