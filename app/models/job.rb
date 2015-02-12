@@ -17,6 +17,8 @@ class Job
 
   slug :title
 
+  index(deleted_at: 1)
+
   belongs_to :employer, counter_cache: true
   has_and_belongs_to_many :ontology_jobs, class_name: 'Ontology::Job'
 
