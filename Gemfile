@@ -29,5 +29,9 @@ group :development, :test do
   gem 'spring'
 
   gem 'faker'
+  gem 'countries'
+
+  gem 'rack-mini-profiler'
+  gem 'ruby-progressbar'
 end
 

@@ -13,5 +13,10 @@ class Job
   field :body, type: String
   field :cleaned_body, type: String
 
+  field :ontology_job_ids, type: Array
+
+  slug :title
+
   belongs_to :employer, counter_cache: true
+  has_and_belongs_to_many :ontology_jobs, class_name: 'Ontology::Job'
 end

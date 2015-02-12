@@ -6,3 +6,10 @@
       .content
         %h3= employer.name
         %p= employer.catch_phrase
+      %ul.jobs
+        - employer.jobs.each do |job|
+          %li
+            %p= link_to job.title, "/jobs/#{job.slug}"
+            %p
+              Other names:
+              = job.ontology_jobs.map(&:title).to_sentence
