@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_action :get_objects
 
+  view_cache_dependency { `git log -n1 --oneline app/views/`.split(' ').first }
+
   private
 
   def get_objects

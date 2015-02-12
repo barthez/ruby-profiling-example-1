@@ -10,4 +10,9 @@ class Employer
   field :jobs_count, type: Integer, default: 0
 
   has_many :jobs
+
+  def cache_key
+    time = jobs.pluck(:updated_at, :deleted_at).map { |t| t.compact.max }.max.utc.nsec
+    [id, time]
+  end
 end
