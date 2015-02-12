@@ -31,6 +31,7 @@ group :development, :test do
   gem 'faker'
   gem 'countries'
 
+  gem 'flamegraph'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar'
 end
